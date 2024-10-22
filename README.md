@@ -1,9 +1,11 @@
 ## Hi there 👋
 
-<!--
-**Chtholly-Boss/Chtholly-Boss** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
+I'm Chtholly Boss, or in Chinese, “珂朵莉老大".
 
-Here are some ideas to get you started:
+The name origins from my favorite anime character [Chtholly Nota Seniorious](https://suka-suka.fandom.com/wiki/Chtholly_Nota_Seniorious), I suffix a "Boss" to make it sound more interesting :)
+
+I like things that can amuse myself, including **Design Ideas**, **Funny Memes**, etc.
+_Just For Fun_, right?
 
 - 🔭 I’m currently studying in HITSZ, i.e. Harbin Institute of Technology in Shenzhen
 - 🌱 I’m currently learning **Computer Science and Technology**
