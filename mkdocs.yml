@@ -1,1 +1,5 @@
 site_name: My Docs
+site_url: https://chtholly-boss.github.io/Chtholly-Boss/
+theme:
+    name: material
+
