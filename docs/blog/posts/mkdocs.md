@@ -2,7 +2,6 @@
 date:
   created: 2024-11-10
   updated: 2024-11-10
-draft: true
 ---
 
 # MkDocs
@@ -78,3 +77,43 @@ You can set many metadata for each post inside the header:
 
 ### Deploying
 Refer to [Deploying to GitHub Pages](https://www.mkdocs.org/user-guide/deploying-your-docs/#project-pages) to learn how to deploy your site using Github Pages.
+
+## Misc Topics
+### Math
+From time to time, I will need to write math equations in my blog. Markdown itself support LaTeX locally, but MkDocs does not support it by default.
+So, I refer to [mkdocs-material Math Reference](https://squidfunk.github.io/mkdocs-material/reference/math/) to learn how to accomplish this.
+
+To put it easy, first, inside `docs/`, create a `javascripts/` directory and put a `mathjax.js` file inside it.
+Fill the file with the following content:
+```js
+window.MathJax = {
+  tex: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex"
+  }
+};
+
+document$.subscribe(() => { 
+  MathJax.startup.output.clearCache()
+  MathJax.typesetClear()
+  MathJax.texReset()
+  MathJax.typesetPromise()
+})
+```
+Then, inside `mkdocs.yml`, add the following lines:
+```yaml
+...
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+```
