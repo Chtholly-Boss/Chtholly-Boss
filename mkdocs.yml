@@ -1,5 +1,9 @@
-site_name: My Docs
+site_name: Chtholly's Home
 site_url: https://chtholly-boss.github.io/Chtholly-Boss/
 theme:
     name: material
+
+plugins:
+    - search
+    - blog
 
