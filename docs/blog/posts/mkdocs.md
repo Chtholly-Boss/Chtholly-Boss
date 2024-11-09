@@ -2,11 +2,13 @@
 date:
   created: 2024-11-10
   updated: 2024-11-10
+categories:
+    - Tools
 ---
 
 # MkDocs
 
-This is my first blog post by using **MkDocs**. I will record my learning experience of MkDocs in this post.
+Notes on learning **MkDocs**.
 
 <!-- more -->
 
@@ -79,6 +81,18 @@ You can set many metadata for each post inside the header:
 Refer to [Deploying to GitHub Pages](https://www.mkdocs.org/user-guide/deploying-your-docs/#project-pages) to learn how to deploy your site using Github Pages.
 
 ## Misc Topics
+### Navigation
+When we write a lot of blogs, we may want to organize them in a tree structure.
+To do this, we can use the `nav` field in the `mkdocs.yml` file. For example:
+```yaml
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md
+    ...
+```
+Navigation can be extremely useful when combined with the *Categories* and *Tags* feature of MkDocs. See [Navigation tutorial of mkdocs-material](https://squidfunk.github.io/mkdocs-material/tutorials/blogs/navigation/#using-categories) for more details.
+
 ### Math
 From time to time, I will need to write math equations in my blog. Markdown itself support LaTeX locally, but MkDocs does not support it by default.
 So, I refer to [mkdocs-material Math Reference](https://squidfunk.github.io/mkdocs-material/reference/math/) to learn how to accomplish this.

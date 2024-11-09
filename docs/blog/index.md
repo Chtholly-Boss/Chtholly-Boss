@@ -1,4 +1,4 @@
-# Notes on LIFE
+# Blog Board
 I will collect my notes on life here, including but not limited to:
 
 - Reading Notes

@@ -1,11 +1,22 @@
 site_name: Chtholly's Home
 site_url: https://chtholly-boss.github.io/Chtholly-Boss/
+
 theme:
     name: material
 
+nav:
+    - Home: index.md
+    - Blog: 
+        - blog/index.md
+
 plugins:
     - search
-    - blog
+    - blog:
+        archive: false
+        categories_name: Categories
+        categories_allowed:
+            - Tools
+            - Readings
 
 markdown_extensions:
   - pymdownx.arithmatex:

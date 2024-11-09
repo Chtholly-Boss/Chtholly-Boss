@@ -2,6 +2,8 @@
 date:
     created: 2024-11-10
     updated: 2024-11-10
+categories:
+    - Tools
 ---
 
 # LaTeX
