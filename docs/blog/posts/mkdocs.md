@@ -1,7 +1,7 @@
 ---
 date:
   created: 2024-11-10
-  updated: 2024-11-10
+  updated: 2024-11-11
 categories:
     - Tools
 ---
@@ -93,6 +93,19 @@ nav:
 ```
 Navigation can be extremely useful when combined with the *Categories* and *Tags* feature of MkDocs. See [Navigation tutorial of mkdocs-material](https://squidfunk.github.io/mkdocs-material/tutorials/blogs/navigation/#using-categories) for more details.
 
+To put it easy, what you need is just to add a `categories:` field in the header of the post.
+Also, in the `mkdocs.yml` file, you can write:
+```yaml
+plugin:
+  ...
+  blog:
+    ...
+    categories_name: Categories
+    categories_allowed:
+        - Tools
+        ...
+```
+
 ### Math
 From time to time, I will need to write math equations in my blog. Markdown itself support LaTeX locally, but MkDocs does not support it by default.
 So, I refer to [mkdocs-material Math Reference](https://squidfunk.github.io/mkdocs-material/reference/math/) to learn how to accomplish this.
@@ -131,3 +144,22 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 ```
+
+### Admonitions
+Admonitions are a way to highlight important information in your documentation.
+You can write an admonition like the following:
+```md
+!!! [type] "Title"
+    Content
+```
+
+I often use the following admonitions:
+
+!!! tip "Tip"
+    This is a tip.
+
+!!! note "Note"
+    This is a note.
+
+!!! warning "Warning"
+    This is a warning.

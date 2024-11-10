@@ -17,8 +17,12 @@ plugins:
         categories_allowed:
             - Tools
             - Readings
+            - Programming
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
 
