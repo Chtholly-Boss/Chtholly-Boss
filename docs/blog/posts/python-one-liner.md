@@ -4,6 +4,8 @@ date:
     updated: 2024-11-11
 categories:
     - Programming
+tags:
+    - Python
 ---
 # Python One Liner
 This post is a collection of Python one-liners, which will make your code neat without breaking the readability.
@@ -114,3 +116,21 @@ for i, name in enumerate(names):
 ```
 
 It is much better than mainly using `range(len(names))` and `names[i]`.
+
+### Remove Duplicates
+You can use `set` to remove duplicates from a list.
+
+```python
+names = ["Alice", "Bob", "Charlie", "Alice"]
+names = list(set(names))
+```
+
+However, this will not preserve the order of the elements. If you want to preserve the order, you can use `dict.fromkeys()`.
+
+```python
+names = ["Alice", "Bob", "Charlie", "Alice"]
+names = list(dict.fromkeys(names))
+```
+
+You may worry about the performance of `dict.fromkeys()`. Indeed, if this part of the code is a bottleneck, you can rewrite the logic to avoid using `dict.fromkeys()`. For most cases, the performance difference is negligible.
+

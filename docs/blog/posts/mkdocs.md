@@ -1,7 +1,7 @@
 ---
 date:
   created: 2024-11-10
-  updated: 2024-11-11
+  updated: 2024-11-13
 categories:
     - Tools
 ---
@@ -105,6 +105,37 @@ plugin:
         - Tools
         ...
 ```
+
+And besides categories, you may also want to use tags to classify your posts.
+First, add a tags plugin in `mkdocs.yml`:
+```yaml
+plugins:
+  - blog:
+    ...
+  - tags
+```
+Then add a `tags:` field in the header of the post:
+```md
+---
+date: ...
+tags:
+  - Python
+---
+```
+Finally, add a tag index file:
+- create a `docs/blog/tags.md` file
+- modify `mkdocs.yml`:
+
+```yaml
+plugins:
+  - tags:
+    tags_file: blog/tags.md
+nav:
+  - Blog:
+    - blog/index.md
+    - Tags: blog/tags.md
+```
+
 
 ### Math
 From time to time, I will need to write math equations in my blog. Markdown itself support LaTeX locally, but MkDocs does not support it by default.
