@@ -19,9 +19,6 @@ This post originates from my need to write a custom CUDA kernel for a neural net
 
 However, the official tutorial is a bit complicated. I will try to prune it down to the essential parts.
 
-!!! warning "Usage"
-    To call your custom extension, you must `import torch` at the beginning of your script. Otherwise, the extension will not be loaded.
-
 ## Binding
 
 First, create a cpp file `module.cpp` and include the header files:
@@ -78,6 +75,34 @@ import module
 print(module.sub.foo()) # 0
 ```
 
+## Troubleshooting
+This section is for some common problems I encountered when writing the extension.
+
+!!! warning "Usage"
+    To call your custom extension, you must `import torch` at the beginning of your script. Otherwise, the extension will not be loaded.
+
+!!! warning "Linking"
+    If you are under Windows, chances are that you will encounter a linking error. This is mainly because the link libraries are not included in the `setup.py`. You can add the following lines to `setup.py`:
+    ```py
+    extra_link_args = ['-LIBPATH:path/to/your/libs', 'your.lib']
+    ```
+
+!!! warning "VScode Intellisense"
+    If you are using VScode, you may encounter a problem that the IntelliSense cannot find the header files. This is because the header files are not included in the `include_path`. You can add the following lines to a `.vscode/c_cpp_properties.json` file:
+    ```json
+    {
+        "configurations": [
+            {
+                "includePath": [
+                "${workspaceFolder}/**",
+                ".../anaconda3/pkgs/python-3.9.20-h8205438_1/include/**",
+                ".../anaconda3/Lib/site-packages/torch/include/**"
+            ],
+            }
+        ],
+    }
+    ```
+    You should replace `.../anaconda3` with the actual path of your anaconda installation. Or replace the path with the actual path of your `torch` installation.
 ## More
 In this part, I will show more usage of **pybind11** and **setuptools**.
 If thinis is too long, I will move some of them to another post.
