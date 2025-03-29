@@ -12,7 +12,6 @@ nav:
 
 plugins:
     - search
-    - mkdocs-pdf
     - blog:
         archive: false
         categories_name: Categories
