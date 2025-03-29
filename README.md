@@ -12,3 +12,5 @@ _Just For Fun_, right?
 - 📫 How to reach me: email me at 220110915@stu.hit.edu.cn
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Chtholly-Boss)](https://github.com/anuraghazra/github-readme-stats)
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Chtholly-Boss&repo=hitFuse)](https://github.com/Chtholly-Boss/hitFuse)
