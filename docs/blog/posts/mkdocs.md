@@ -194,3 +194,7 @@ I often use the following admonitions:
 
 !!! warning "Warning"
     This is a warning.
+
+### PDF Embed
+To embed a PDF file in a MkDocs page, use the `mkdocs-pdf` plugin.
+Follow the instructions [here](https://pypi.org/project/mkdocs-pdf/)

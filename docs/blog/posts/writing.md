@@ -71,5 +71,3 @@ After the insallation, you can create a new `.typ` file and write some code.
 ```typ
 = Hello, world!
 ```
-
-I have written a post about Typst [here](../posts/typst.md).

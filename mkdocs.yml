@@ -12,17 +12,20 @@ nav:
 
 plugins:
     - search
+    - mkdocs-pdf
     - blog:
         archive: false
         categories_name: Categories
         categories_allowed:
+            - Linux
+            - Programming
             - Tools
             - Readings
-            - Programming
     - tags:
         tags_file: blog/tags.md
 
 markdown_extensions:
+  - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.superfences
