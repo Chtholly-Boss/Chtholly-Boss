@@ -238,3 +238,23 @@ sudo ./minimal -p <pid>
 ```
 
 Then you can see the output of the `minimal` program in the terminal where you run `cat /sys/kernel/debug/tracing/trace_pipe`.
+
+## Appendix
+We recommend the following resources for further learning:
+
+### Reference
+
+- [Linux BPF subsystem](https://www.kernel.org/doc/html/v6.14-rc6/bpf/index.html)
+- [eBPF Library](https://docs.ebpf.io/ebpf-library/)
+- [BPF and XDP Reference Guide](https://docs.cilium.io/en/latest/reference-guides/bpf/index.html)
+
+### Repository
+
+- [awesome-ebpf](https://github.com/zoidyzoidzoid/awesome-ebpf)
+- [bpf-developer-tutorial](https://github.com/eunomia-bpf/bpf-developer-tutorial)
+- [libbpf-bootstrap](https://github.com/libbpf/libbpf-bootstrap)
+
+### Post
+
+- [Official Introduction to eBPF](https://ebpf.io/what-is-ebpf/)
+- [Building BPF applications with libbpf-bootstrap](https://nakryiko.com/posts/libbpf-bootstrap/)
